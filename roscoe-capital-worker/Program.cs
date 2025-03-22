@@ -9,11 +9,11 @@ namespace roscoe_capital_worker
             HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
             builder.Services.AddHostedService<ExcelWorker>();
             builder.Services.AddSingleton<IExcelHandler, ExcelHandler>();
-            
-            var redisHost = builder.Configuration["REDIS_HOST"] ?? "pubsub";
+
+            string redisHost = builder.Configuration["pubsub:service:host"] ?? "pubsub";
             builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
             {
-                var config = new ConfigurationOptions
+                ConfigurationOptions config = new ConfigurationOptions
                 {
                     EndPoints = { $"{redisHost}:6379" },
                     ConnectRetry = 1,
@@ -23,8 +23,7 @@ namespace roscoe_capital_worker
                 return ConnectionMultiplexer.Connect(config);
             });
 
-            IHost host = builder.Build();
-            host.Run();
+            builder.Build().Run();
         }
     }
 }

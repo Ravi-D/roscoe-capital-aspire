@@ -8,8 +8,7 @@ namespace roscoe_capital_worker
     {
         private readonly ILogger<ExcelWorker> _logger;
         private readonly IConnectionMultiplexer _redis;
-        private readonly RedisChannel _channel = "test-channel";
-        //private readonly RedisChannel c = PatternMode.Auto;
+        private readonly RedisChannel _channel = "excel-channel";
 
         public ExcelWorker(ILogger<ExcelWorker> logger, IExcelHandler excelhandler, IConnectionMultiplexer redis)
         {
@@ -25,6 +24,7 @@ namespace roscoe_capital_worker
                 await subscriber.SubscribeAsync(_channel, (channel, message) =>
                 {
                     _logger.LogInformation("Received message: {Message}", message);
+                    _redis.GetDatabase().StringSet("excel-channel", message);
                 });
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(TimeSpan.FromSeconds(5), ct);

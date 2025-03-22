@@ -32,12 +32,14 @@
     {
         currentCount++;
     }
+
     private void CheckChanged(ChangeEventArgs e)
     {
         checkedMessage = (bool)e.Value ? "Checked" : "Unchecked";
     }
+
     private async void Test(ChangeEventArgs e)
     {
-        currentTestStatus = await redisPublisher.TestRedisPublisher(e);
+        currentTestStatus = await redisPublisher.PublishToSubscribers(e);
     }
 }

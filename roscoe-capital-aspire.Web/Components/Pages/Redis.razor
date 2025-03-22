@@ -1,0 +1,31 @@
+﻿@page "/redis"
+@inject IRedisPublisher RedisPublisher
+
+<h1>Redis Pub/Sub Test</h1>
+
+<input @bind="Message" class="form-control w-50" placeholder="Type message here..." />
+
+<button class="btn btn-primary mt-2" @onclick="PublishMessage">Publish</button>
+
+@if (!string.IsNullOrWhiteSpace(Status))
+{
+    <div class="alert alert-info mt-3">@Status</div>
+}
+
+@code {
+    private string Message { get; set; } = "";
+    private string Status { get; set; } = "";
+
+    private async Task PublishMessage()
+    {
+        if (string.IsNullOrWhiteSpace(Message))
+        {
+            Status = "⚠️ Message cannot be empty.";
+            return;
+        }
+
+        var result = await RedisPublisher.PublishToSubscribers(new ChangeEventArgs { Value = Message });
+        Status = $"✅ Published: \"{result}\"";
+        Message = "";
+    }
+}
