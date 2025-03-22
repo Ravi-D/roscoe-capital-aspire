@@ -19,9 +19,8 @@ namespace roscoe_capital_worker
         {
             using (workbook) 
             {
-                IEnumerable<IXLRangeRow>? rows = workbook.Worksheet(1).RangeUsed()
-                            .RowsUsed().Skip(1)
-                            .Where(row => !row.IsEmpty());
+                IEnumerable<IXLRangeRow>? rows = workbook.Worksheet(1).RangeUsed().RowsUsed().Skip(1)
+                    .Where(row => !row.IsEmpty());
             }
         }
     }

@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\roscoe-capital-aspire.Web\roscoe-capital-aspire.Web.csproj" />
-    <ProjectReference Include="..\roscoe-capital-backend\roscoe-capital-backend.csproj" />
     <ProjectReference Include="..\roscoe-capital-worker\roscoe-capital-worker.csproj" />
   </ItemGroup>
 

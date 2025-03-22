@@ -1,4 +1,5 @@
 ﻿@page "/counter"
+@inject IRedisPublisher redisPublisher
 @rendermode InteractiveServer
 
 <PageTitle>Counter</PageTitle>
@@ -9,11 +10,34 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<p>
+    <label>
+        <input type="checkbox" @onchange="CheckChanged" />
+        @checkedMessage
+    </label>
+
+    <label>
+        <input type="checkbox" @onchange="Test" />
+        @currentTestStatus
+    </label>
+</p>
+
+
 @code {
     private int currentCount = 0;
+    private string checkedMessage = "Unchecked";
+    private string currentTestStatus = "prior";
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+    private void CheckChanged(ChangeEventArgs e)
+    {
+        checkedMessage = (bool)e.Value ? "Checked" : "Unchecked";
+    }
+    private async void Test(ChangeEventArgs e)
+    {
+        currentTestStatus = await redisPublisher.TestRedisPublisher(e);
     }
 }
