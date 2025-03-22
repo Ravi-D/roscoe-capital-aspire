@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "roscoe-capital-backend": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

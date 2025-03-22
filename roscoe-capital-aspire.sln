@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roscoe-capital-aspire.AppHost", "roscoe-capital-aspire.AppHost\roscoe-capital-aspire.AppHost.csproj", "{2B6C4659-95A7-4529-96B9-A73126E91FC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roscoe-capital-aspire.ServiceDefaults", "roscoe-capital-aspire.ServiceDefaults\roscoe-capital-aspire.ServiceDefaults.csproj", "{4A5872C8-CC31-515E-9E52-9CDA659F1702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roscoe-capital-aspire.Web", "roscoe-capital-aspire.Web\roscoe-capital-aspire.Web.csproj", "{0EDD057B-4D8F-280B-975E-1A1D6DAB8149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roscoe-capital-aspire.Tests", "roscoe-capital-aspire.Tests\roscoe-capital-aspire.Tests.csproj", "{2EAB85A8-FA8B-88DA-D2C0-A606E0E7227C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roscoe-capital-worker", "roscoe-capital-worker\roscoe-capital-worker.csproj", "{C471DA63-7CC6-4E1F-B413-31FA3D13163B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B6C4659-95A7-4529-96B9-A73126E91FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6C4659-95A7-4529-96B9-A73126E91FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6C4659-95A7-4529-96B9-A73126E91FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6C4659-95A7-4529-96B9-A73126E91FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5872C8-CC31-515E-9E52-9CDA659F1702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5872C8-CC31-515E-9E52-9CDA659F1702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5872C8-CC31-515E-9E52-9CDA659F1702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5872C8-CC31-515E-9E52-9CDA659F1702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDD057B-4D8F-280B-975E-1A1D6DAB8149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDD057B-4D8F-280B-975E-1A1D6DAB8149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDD057B-4D8F-280B-975E-1A1D6DAB8149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDD057B-4D8F-280B-975E-1A1D6DAB8149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAB85A8-FA8B-88DA-D2C0-A606E0E7227C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAB85A8-FA8B-88DA-D2C0-A606E0E7227C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAB85A8-FA8B-88DA-D2C0-A606E0E7227C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAB85A8-FA8B-88DA-D2C0-A606E0E7227C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C471DA63-7CC6-4E1F-B413-31FA3D13163B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C471DA63-7CC6-4E1F-B413-31FA3D13163B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C471DA63-7CC6-4E1F-B413-31FA3D13163B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C471DA63-7CC6-4E1F-B413-31FA3D13163B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76FDDBF2-6E85-4F43-A98E-2451A50F2390}
+	EndGlobalSection
+EndGlobal
