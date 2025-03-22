@@ -22,7 +22,6 @@ namespace roscoe_capital_worker
                 IEnumerable<IXLRangeRow>? rows = workbook.Worksheet(1).RangeUsed()
                             .RowsUsed().Skip(1)
                             .Where(row => !row.IsEmpty());
-
             }
         }
     }
